@@ -1,6 +1,9 @@
 <template>
-  <div>
-    
+
+  <div class="page">
+    <div class="wrap">
+      <!-- <h1>Картины эпохи Возрождения</h1> -->
+    </div>
       
   </div>
 
