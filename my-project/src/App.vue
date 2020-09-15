@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <img src="./assets/Group.png" alt="logo" />
-    <div>
-      <img src="./assets/Group.png" alt="logo" />
+    <!-- <img class="logo" src="./assets/Group.png" alt="logo" />
+     -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
-  </div>
-  
 </template>
 
 <script>
