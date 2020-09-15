@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="" class="logo"> 
+    <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/Group.png?raw=true" class="logo"> 
     <nav>
       <ul class="nav">
         <li>Каталог</li>
@@ -54,7 +54,7 @@ export default {
   display: block;
   width: 58;
   height: 100;
-  background-image: src"https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/Group.png?raw=true"
+  background-image: url()
 }
 
 h3 {
