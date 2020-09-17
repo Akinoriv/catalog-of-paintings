@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <HelloWorld/>
     <div class="header">
       <div class="links">
         <img src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/5fe5899fab4c6a279e8dba464688de7aea775aa6/my-project/src/assets/Group.svg" class="logo"> 
@@ -19,17 +18,19 @@
         <button>Найти</button>
       </div>
     </div>
+
+    <catalog/>
   </div>
   
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import catalog from './components/catalog.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    catalog
   }
 }
 </script>
@@ -60,7 +61,7 @@ button {
 }
 
 input {
-  padding-left: 24px;
+  padding-left: 16px;
   border: 1px solid #E1E1E1;
   box-sizing: border-box;
   height: 48px;
@@ -69,23 +70,26 @@ input {
   color: #9F9F9F;
   align-self : Inside;
   Font-Family: Merriweather;
-  Font-Style: Regular;
+  Font-Style: normal;
   Font-Size: 14px;
   Line-Height: 21px;
   Line-Height: 150%;
 }
 
 .header {
-  padding:24px;
-  
-  /* position: fixed; */
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: rgb(246, 243, 243);
+  border-bottom: 1px solid #E1E1E1;
   display: flex;
-  /* width: 100%; */
-  /* max-width: 1200px; */
+  justify-content: space-between;
+  /* width: 100%;
+  max-width: 1400px;
   justify-content: space-around;
-  
-  
-  
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px; */
 }
 
 
@@ -110,14 +114,45 @@ ul{
         justify-content:start;  
       }
 
- 
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+ }
+
+h2 {
+  font-weight: normal;
+  font-size: 18px;  
+ }
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+ }
+
+h4 {
+  font-weight: bold;
+  font-size: 16px;
+ }
+
+h5 {
+  font-weight: normal;
+  font-size: 16px;  
+ }
+
+h6 {
+  font-weight: 300;
+  font-size: 16px;
+ }
+
 #app {
   font-family: 'Merriweather', serif;
   color: #343030;
-  Font-Style: Regular;
+  font-style: normal;
   Font-Size: 14px;
   Line-Height: 21px;
   Line-Height: 150%;
   background:rgb(246, 243, 243);
+  
+  padding: 0 calc(50% - 610px);
 }
 </style>
