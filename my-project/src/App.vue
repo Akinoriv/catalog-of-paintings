@@ -35,9 +35,9 @@
         </nav>
       </div>
       <div class="contacts">
-        <img src="">
+        <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/phone.png?raw=true">
         <a href='tel:7(495)555-55-55'>+7 (495) 555-55-55</a>
-        <img src="">
+        <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/geo.png?raw=true">
         <a>г. Москва, ул. Расплетина, 24</a>
       </div>
     </div>
@@ -132,15 +132,35 @@ ul{
   .nav>li {
         margin-left: 24px;
         margin-right: 24px;
-        align-self: Center;
+        align-self: center;
         justify-content:start;  
       }
 
 .footer {
-  padding: 24px;
+  margin: 24px;
   background:#E1E1E1;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  max-width: 1258px;
+
+	/* left: 0;
+	bottom: 0; */
+	width: 100%;
+  /* padding: 0 calc(50% - 610px);  */
+}
+
+.contacts>img {
+ width: auto;
+ height: 14px;
+}
+
+.contacts>a {
+  margin-left: 24px;
+  margin-right: 24px;
+  align-self: center;
+  justify-content: start;  
+  color: #555555;
 }
 
 h1 {
