@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header">
       <div class="links">
-        <img src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/5fe5899fab4c6a279e8dba464688de7aea775aa6/my-project/src/assets/Group.svg" class="logo"> 
+        <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/Group.png?raw=true"> 
         <nav>
           <ul class="nav">
             <li>Каталог</li>
@@ -23,7 +23,7 @@
 
     <div class="footer">
       <div class="links">
-        <img src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/5fe5899fab4c6a279e8dba464688de7aea775aa6/my-project/src/assets/Group.svg" class="logo"> 
+        <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/logo-museum%202.png?raw=true"> 
         <nav>
           <ul class="nav">
             <li>Каталог</li>
@@ -34,9 +34,11 @@
           </ul>
         </nav>
       </div>
-      <div>
-        <input v-model="message" placeholder="Поиск по названию картины">
-        <button>Найти</button>
+      <div class="contacts">
+        <img src="">
+        <a href='tel:7(495)555-55-55'>+7 (495) 555-55-55</a>
+        <img src="">
+        <a>г. Москва, ул. Расплетина, 24</a>
       </div>
     </div>
   </div>
@@ -133,6 +135,13 @@ ul{
         align-self: Center;
         justify-content:start;  
       }
+
+.footer {
+  padding: 24px;
+  background:#E1E1E1;
+  display: flex;
+  justify-content: space-between;
+}
 
 h1 {
   font-weight: bold;
