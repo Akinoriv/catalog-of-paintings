@@ -77,8 +77,9 @@ input {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
   background: rgb(246, 243, 243);
   border-bottom: 1px solid #E1E1E1;
   display: flex;
@@ -117,6 +118,7 @@ ul{
 h1 {
   font-weight: bold;
   font-size: 24px;
+  /* line-height: 1.7; */
  }
 
 h2 {
@@ -131,17 +133,17 @@ h3 {
 
 h4 {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
  }
 
 h5 {
   font-weight: normal;
-  font-size: 16px;  
+  font-size: 14px;  
  }
 
 h6 {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
  }
 
 #app {
@@ -151,8 +153,14 @@ h6 {
   Font-Size: 14px;
   Line-Height: 21px;
   Line-Height: 150%;
-  background:rgb(246, 243, 243);
   
-  padding: 0 calc(50% - 610px);
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1258px;
+
+  /* padding: 0 calc(50% - 610px); */
 }
 </style>
