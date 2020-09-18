@@ -20,6 +20,25 @@
     </div>
 
     <catalog/>
+
+    <div class="footer">
+      <div class="links">
+        <img src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/5fe5899fab4c6a279e8dba464688de7aea775aa6/my-project/src/assets/Group.svg" class="logo"> 
+        <nav>
+          <ul class="nav">
+            <li>Каталог</li>
+            <li>Доставка</li>
+            <li>Оплата</li>
+            <li>Контакты</li>
+            <li>О галерее</li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <input v-model="message" placeholder="Поиск по названию картины">
+        <button>Найти</button>
+      </div>
+    </div>
   </div>
   
 </template>

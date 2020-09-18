@@ -103,10 +103,9 @@ export default {
   /* justify-content: space-between; */
 }
 
-.paintings {
+/* .paintings {
+} */
 
- 
-}
 .paintings-item {
   height: 328px;
   width: 282px;
