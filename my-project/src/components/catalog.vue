@@ -1,66 +1,75 @@
 <template>
 
   <div class="page">
-    <div class="title">
-      <h1>Картины эпохи Возрождения</h1>
+    <div class="page__title">
+      <h1> Картины эпохи Возрождения </h1>
     </div>
+
     <div class="wrap">
       <div class="paintings">
 
-        <div class="paintings-item">
-          <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/painting-63186_1280%201.png?raw=true" 
-                                                                                                              alt="«Рождение Венеры»">
-          <h2> «Рождение Венеры» <br> Сандро Боттичелли </h2>
-          <div class="paintings-item__block">
-            <div class="paintings-item__price">
-              <h6> 2 000 000 $ </h6>
-              <h3> 1 000 000 $ </h3>
+        <div class="painting__item">
+          <img class="painting__item-img" 
+            src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/painting-63186_1280%201.png?raw=true" 
+            alt="«Рождение Венеры»"
+          >
+          <h2 class="painting__item-name"> «Рождение Венеры» <br> Сандро Боттичелли </h2>
+          <div class="painting__item-block">
+            <div class="painting__price-box">
+              <h6 class="painting__price-discount"> 2 000 000 $ </h6>
+              <h3 class="painting__price--new"> 1 000 000 $ </h3>
             </div>
-            <div class="paintings-item__button">
-              <button> Купить </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="paintings-item">
-          <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/ae973f6678e037cd297053384aa7dca0%201.png?raw=true" alt="«Тайная вечеря»">
-          <h2> «Тайная вечеря» <br> Леонардо да Винчи </h2>
-          <div class="paintings-item__block">
-            <div class="paintings-item__price">
-              <h3> 3 000 000 $ </h3>
-            </div>
-            <div class="paintings-item__button">
-              <button> Купить </button>
-            </div>
-        </div>
-        </div>
-
-        <div class="paintings-item">
-          <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/image-19%201.png?raw=trues" alt="«Сотворение Адама»">
-          <h2> «Сотворение Адама» <br> Микеланджело </h2>
-          <div class="paintings-item__block">
-            <div class="paintings-item__price">
-              <h6> 6 000 000 $ </h6>
-              <h3> 5 000 000 $ </h3>
-            </div>
-            <div class="paintings-item__button">
-              <button> В корзине </button>
+            <div class="painting__button-box">
+              <button class="painting__button"> Купить </button>
             </div>
           </div>
         </div>
 
-        <div class="paintings-item sold">
-          <img src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/20152310142330%201.png?raw=true" alt="«Урок анатомии»">
-          <h2> «Урок анатомии» <br> Рембрандт </h2>
-          <div class="sold__item">
-            <h3> Продана на аукционе </h3>
+        <div class="painting__item">
+          <img class="painting__item-img"
+            src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/ae973f6678e037cd297053384aa7dca0%201.png?raw=true"
+            alt="«Тайная вечеря»"
+          >
+          <h2 class="painting__item-name"> «Тайная вечеря» <br> Леонардо да Винчи </h2>
+          <div class="painting__item-block">
+            <div class="painting__price-box">
+              <h3 class="painting__price"> 3 000 000 $ </h3>
+            </div>
+            <div class="painting__button-box">
+              <button class="painting__button"> Купить </button>
+            </div>
+        </div>
+        </div>
+
+        <div class="painting__item">
+          <img class="painting__item-img" 
+            src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/image-19%201.png?raw=trues" 
+            alt="«Сотворение Адама»"
+          >
+          <h2 class="painting__item-name"> «Сотворение Адама» <br> Микеланджело </h2>
+          <div class="painting__item-block">
+            <div class="painting__price-box">
+              <h6 class="painting__price-discount"> 6 000 000 $ </h6>
+              <h3 class="painting__price--new"> 5 000 000 $ </h3>
+            </div>
+            <div class="painting__button-box">
+              <button class="painting__button painting__button--basket"> В корзине </button>
+            </div>
           </div>
         </div>
 
+        <div class="painting__item painting__item--sold">
+          <img class="painting__item-img" 
+            src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/20152310142330%201.png?raw=true" 
+            alt="«Урок анатомии»"
+          >
+          <h2 class="painting__item-name"> «Урок анатомии» <br> Рембрандт </h2>
+          <div class="painting__item-block--sold">
+            <h3 class="painting__price"> Продана на аукционе </h3>
+          </div>
+        </div>
       </div>
-      
     </div>
-      
   </div>
 
 </template>
@@ -75,17 +84,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
 
 .page {
   /* min-height: calc(100vh - 80px); */
   padding-top: 102px;
-  /* padding-bottom: 96px;
-  box-sizing: border-box;
-	min-height: 100%; */
+  padding-bottom: 96px;
+  // box-sizing: border-box;
+	// min-height: 100%; 
 }
 
-.title {
+.page__title {
 
   /* max-width: 1400px; */
   /* padding-left: 7%; */
@@ -109,7 +118,7 @@ export default {
 /* .paintings {
 } */
 
-.paintings-item {
+.painting__item {
   height: 328px;
   width: 282px;
   float:left; 
@@ -124,18 +133,18 @@ export default {
   box-sizing: border-box;
 }
 
-.paintings-item>h2 {
+.painting__item-name {
   padding-left: 24px;
   text-align: left;
   line-height: 1.5;
 }
 
-.paintings-item>img {
+.painting__item-img  {
   height: 158px;
   width: 280px;
 }
 
-.paintings-item__block{
+.painting__item-block {
   margin:  24px;
   /* padding-top: ; */
   display: flex;
@@ -143,35 +152,58 @@ export default {
   justify-content: space-between;
 }
 
-.paintings-item__price {
+.painting__price-box {
   align-self: center;
-
 }
-.paintings-item__price>h3 {
-  text-decoration: line-through;
+
+.painting__price {
+  margin: 0;
+  text-align: start;
+} 
+
+.painting__price--new {
   margin: 0;
   text-align: start;
 }
 
-.paintings-item__price>h6 {
+.painting__price-discount {
   color: #A0A0A0;
   text-decoration: line-through;
   margin: 0;
   text-align: start;
 }
 
-.sold {
+.painting__item--sold {
   background :rgb(246, 243, 243);
-  opacity:.4;
-  
+  opacity:.4; 
 }
 
-.sold__item {
+.painting__item-block--sold {
   margin: 24px;
   text-align: left;
   display: flex;
   align-items: flex-end;
-
 }
+
+.painting__button {
+   /* padding-left: 24px; */
+  border: none;
+  height: 48px;
+  width: 120px;
+  background-color: #382E2B;
+  color: #F4F6F9;
+  Font-Family: Merriweather;
+  Font-Style: Bold;
+  Font-Size: 14px;
+  Line-Height: 21px;
+  Line-Height: 150%;
+  /* justify-content: space-evenly; */
+  justify-content:right;
+}
+
+.painting__button--basket {
+  background-color: #5B3A32
+}
+
 
 </style>
