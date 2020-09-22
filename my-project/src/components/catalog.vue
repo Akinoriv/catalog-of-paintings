@@ -78,8 +78,11 @@ export default {
 <style scoped>
 
 .page {
-  padding-top: 14px;
-  padding-bottom: 320px;
+  /* min-height: calc(100vh - 80px); */
+  padding-top: 102px;
+  /* padding-bottom: 96px;
+  box-sizing: border-box;
+	min-height: 100%; */
 }
 
 .title {
@@ -158,7 +161,9 @@ export default {
 }
 
 .sold {
-  background :rgb(246, 243, 243); opacity:.4;
+  background :rgb(246, 243, 243);
+  opacity:.4;
+  
 }
 
 .sold__item {

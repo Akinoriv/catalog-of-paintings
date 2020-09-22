@@ -13,7 +13,7 @@
           </ul>
         </nav>
       </div>
-      <div>
+      <div class="contacts">
         <input v-model="message" placeholder="Поиск по названию картины">
         <button>Найти</button>
       </div>
@@ -104,20 +104,22 @@ input {
   background: rgb(246, 243, 243);
   border-bottom: 1px solid #E1E1E1;
   display: flex;
-  justify-content: space-between;
-  /* width: 100%;
-  max-width: 1400px;
+
+  width: auto;
+  /* max-width: 1400px; */
   justify-content: space-around;
   position: fixed;
   top: 0px;
   right: 0px;
-  left: 0px; */
+  left: 0px;
+
 }
 
 
-.links {
+.header>.links {
   display: flex;
   justify-content: space-between;
+  padding-left: 8px;
 }
 
 ul{
@@ -137,19 +139,31 @@ ul{
       }
 
 .footer {
-  margin: 24px;
+  /* height: 96px; */
+  padding: 24px;
   background:#E1E1E1;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  max-width: 1258px;
 
-	/* left: 0;
-	bottom: 0; */
-	width: 100%;
-  /* padding: 0 calc(50% - 610px);  */
+  position: fixed;
+	left: 0;
+  right: 0;
+	bottom: 0;
+	width: auto;
+  
+  max-width: 1400px;
+  justify-content: space-around;
 }
 
+.footer>.links {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 27px;
+}
+
+.contacts{
+  /* justify-content: space-between; */
+  display: flex;
+}
 .contacts>img {
  width: auto;
  height: 14px;
@@ -209,6 +223,8 @@ h6 {
   margin-left: auto;
   max-width: 1258px;
 
+  height: 100%;
+  
   /* padding: 0 calc(50% - 610px); */
 }
 </style>
