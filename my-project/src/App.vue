@@ -170,6 +170,7 @@ export default {
 }
 
 .foter__contacts-name {
+  text-decoration: none;
   margin-left: 24px;
   margin-right: 24px;
   align-self: center;

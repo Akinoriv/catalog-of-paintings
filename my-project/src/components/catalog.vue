@@ -52,9 +52,20 @@
               <h6 class="painting__price-discount"> 6 000 000 $ </h6>
               <h3 class="painting__price--new"> 5 000 000 $ </h3>
             </div>
+
             <div class="painting__button-box">
-              <button class="painting__button painting__button--basket"> В корзине </button>
+              <!-- <h2 v-if="seen">SEEN</h2> -->
+              <button  v-if="seen" class="painting__button"  v-on:click="toggleSeen"  >{{ button.text }}</button>
+
+              <button  v-else id="hide-seen" class="painting__button painting__button--basket" v-on:click="toggleSeen"> 
+                <img class="foter__contacts-img" 
+                src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/phone.png?raw=true"> 
+                {{ button.text }} </button>
             </div>
+
+            <!-- <div id="example-1" class="painting__button-box">
+              <button v-on:click="counter += true" class="painting__button painting__button--basket"> {{counter}} </button>
+            </div> -->
           </div>
         </div>
 
@@ -76,9 +87,32 @@
 
 <script>
 export default {
-  name: 'catalog',
-  props: {
-    msg: String
+
+  data() {
+
+    return {
+         button: {
+      text: 'Купить'
+    },
+      seen: true
+    }
+  },
+
+  methods: {  
+  
+
+    toggleSeen: function() {
+      this.seen = !this.seen;
+      this.button.text = this.seen ? 'Купить' : 'В корзине';
+    },
+
+    buttonClick: function() {
+      if(this.show) {
+        return 'Скрыть'
+      }
+      return 'Показать'
+    },
+
   }
 }
 </script>
@@ -203,6 +237,7 @@ export default {
 
 .painting__button--basket {
   background-color: #5B3A32
+  
 }
 
 
