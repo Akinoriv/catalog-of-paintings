@@ -15,7 +15,7 @@
         </nav>
       </div>
       <div class="search">
-        <input class="search__input" v-model="message" placeholder="Поиск по названию картины">
+        <input class="search__input" placeholder="Поиск по названию картины">
         <button class="search__button">Найти</button>
       </div>
     </header>
@@ -143,7 +143,7 @@ export default {
   background:#E1E1E1;
   display: flex;
 
-  position: fixed;
+  // position: fixed;
 	left: 0;
   right: 0;
 	bottom: 0;

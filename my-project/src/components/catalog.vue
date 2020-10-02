@@ -20,7 +20,12 @@
               <h3 class="painting__price--new"> 1 000 000 $ </h3>
             </div>
             <div class="painting__button-box">
-              <button class="painting__button"> Купить </button>
+              <button  v-if="picture[0].status" class="painting__button"  v-on:click="putInBacskets0"> {{ picture[0].state }} </button>
+              <button  v-else id="hide-seen" class="painting__button painting__button--basket" v-on:click="putInBacskets0"> 
+                <img class="foter__contacts-img" 
+                src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/216b544ec28482b1801ed7ef5c97ec9a1b2ceb7f/my-project/src/assets/Vector.svg"> 
+                {{ picture[0].state }} 
+              </button>
             </div>
           </div>
         </div>
@@ -36,7 +41,12 @@
               <h3 class="painting__price"> 3 000 000 $ </h3>
             </div>
             <div class="painting__button-box">
-              <button class="painting__button"> Купить </button>
+              <button  v-if="picture[1].status" class="painting__button"  v-on:click="putInBacskets1"> {{ picture[1].state }} </button>
+              <button  v-else id="hide-seen" class="painting__button painting__button--basket" v-on:click="putInBacskets1"> 
+                <img class="foter__contacts-img" 
+                src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/216b544ec28482b1801ed7ef5c97ec9a1b2ceb7f/my-project/src/assets/Vector.svg"> 
+                {{ picture[1].state }} 
+              </button>
             </div>
         </div>
         </div>
@@ -54,18 +64,14 @@
             </div>
 
             <div class="painting__button-box">
-              <!-- <h2 v-if="seen">SEEN</h2> -->
-              <button  v-if="seen" class="painting__button"  v-on:click="toggleSeen"  >{{ button.text }}</button>
-
-              <button  v-else id="hide-seen" class="painting__button painting__button--basket" v-on:click="toggleSeen"> 
+              <button  v-if="picture[2].status" class="painting__button" v-on:click="ajaxRequest"> {{ picture[2].state }} </button>
+              <button  v-else  class="painting__button painting__button--basket" v-on:click="ajaxRequest"> 
                 <img class="foter__contacts-img" 
-                src="https://github.com/Akinoriv/Redsoft-test/blob/master/my-project/src/assets/phone.png?raw=true"> 
-                {{ button.text }} </button>
+                src="https://raw.githubusercontent.com/Akinoriv/Redsoft-test/216b544ec28482b1801ed7ef5c97ec9a1b2ceb7f/my-project/src/assets/Vector.svg"> 
+                {{ picture[2].state }} 
+              </button>
             </div>
 
-            <!-- <div id="example-1" class="painting__button-box">
-              <button v-on:click="counter += true" class="painting__button painting__button--basket"> {{counter}} </button>
-            </div> -->
           </div>
         </div>
 
@@ -86,34 +92,97 @@
 </template>
 
 <script>
+// import axios from "axios";
+
 export default {
-
   data() {
-
     return {
-         button: {
-      text: 'Купить'
-    },
-      seen: true
+      test: "",
+      picture: [
+        {
+          id: 0,
+          name: "Рождение Венеры",
+          state: "Купить",
+          status: true
+        },
+         {
+          id: 1,
+          name: "Тайная вечеря",
+          state: "Купить",
+          status: true
+        },
+        {
+          id: 2,
+          name: "Сотворение Адама",
+          state: "Купить",
+          status: true
+        },
+      ],
+
     }
   },
 
   methods: {  
   
-
-    toggleSeen: function() {
-      this.seen = !this.seen;
-      this.button.text = this.seen ? 'Купить' : 'В корзине';
+    // changes the state of the button on clicked
+    putInBacskets0: function () {
+      this.picture[0].status = !this.picture[0].status;
+      this.picture[0].state = this.picture[0].status ? 'Купить' : 'В корзине';
     },
+    // TO DO
+    putInBacskets1: function () {
+      this.picture[1].status = !this.picture[1].status;
+      this.picture[1].state = this.picture[1].status ? 'Купить' : 'В корзине';
+    },  
+     
+    putInBacskets2: function() {
+      var then = this;
+      // then.picture[2].status = !then.picture[2].status;
+      then.picture[2].state = then.picture[2].status ? 'Купить' : 'Обработка';
+    },
+  
+    ajaxRequest: function() {
+      this.putInBacskets2();
+      var then = this;
+      let XMLH = new XMLHttpRequest();
 
-    buttonClick: function() {
-      if(this.show) {
-        return 'Скрыть'
+      XMLH.open('GET', "https://jsonplaceholder.typicode.com/posts/1");
+      
+      XMLH.onreadystatechange = function() {
+        if (XMLH.readyState === 4 && XMLH.status === 200) {
+          test(XMLH.responseText);
+          putInBacsketsOk(XMLH.responseText);
+        }
+        else {
+          putInBacsketsEror()
+        }
       }
-      return 'Показать'
-    },
+      function putInBacsketsOk() {
+        then.picture[2].status = !then.picture[2].status;
+        then.picture[2].state = then.picture[2].status ? 'Купить' : 'В корзине';
+      }
+      function putInBacsketsEror() {
+        then.picture[2].status = !then.picture[2].status;
+        then.picture[2].state = then.picture[2].status ? 'Купить' : 'Eror';
+      // then.picture[2].state =  'обработка' ;
+    }
+      function test(data) {
+        console.log(data) 
+      }
 
-  }
+      XMLH.send();
+    
+    },
+  },
+
+  // mounted() {
+  //   var then = this
+  //   if(localStorage.getItem()){
+  //     then.picture = localStorage.test;
+  //   }
+  // },
+
+    
 }
 </script>
 
