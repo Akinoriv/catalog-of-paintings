@@ -143,7 +143,7 @@ export default {
   background:#E1E1E1;
   display: flex;
 
-  // position: fixed;
+  position: fixed;
 	left: 0;
   right: 0;
 	bottom: 0;
